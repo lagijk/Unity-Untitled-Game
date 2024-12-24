@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5951040555980545466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5951040555980545464}
+  - component: {fileID: 5951040555980545467}
+  m_Layer: 0
+  m_Name: FightRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5951040555980545464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951040555980545466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5951040555980545467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951040555980545466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927bb5e235c4af44faebb764ab6aab28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabPlacer: {fileID: 4119871613438327807, guid: 809e15fdf337bea46890f31966b1c9b6, type: 3}
+  enemyPlacementData:
+  - minQuantity: 3
+    maxQuantity: 6
+    enemyPrefab: {fileID: 5423220127599985577, guid: b5baa262da26e994da409d1dbf4ffe1e, type: 3}
+    enemySize: {x: 1, y: 1}
+  - minQuantity: 1
+    maxQuantity: 3
+    enemyPrefab: {fileID: 2968230666082091713, guid: 5adbf729bb9986d42acdbe903ac37d78, type: 3}
+    enemySize: {x: 1, y: 1}
+  itemData:
+  - minQuantity: 3
+    maxQuantity: 5
+    itemData: {fileID: 11400000, guid: ae5e593e1d0dd8840b6025ac9a68766f, type: 2}
+  - minQuantity: 0
+    maxQuantity: 3
+    itemData: {fileID: 11400000, guid: cc21f817e4e0ac640b6d47eeb4c7a2b6, type: 2}
+  - minQuantity: 0
+    maxQuantity: 1
+    itemData: {fileID: 11400000, guid: 9f45bd8a34e4fe64ba5849f09d4aa6a6, type: 2}
+  - minQuantity: 0
+    maxQuantity: 1
+    itemData: {fileID: 11400000, guid: 4d0c175f75e22324db222d9af969a1bf, type: 2}
+  - minQuantity: 0
+    maxQuantity: 1
+    itemData: {fileID: 11400000, guid: 630b0b12b3f78a54489af3d412ab8ed7, type: 2}
+  - minQuantity: 0
+    maxQuantity: 1
+    itemData: {fileID: 11400000, guid: 9f45cfbbf15eb544d9861654ff7f0784, type: 2}
+  - minQuantity: 0
+    maxQuantity: 1
+    itemData: {fileID: 11400000, guid: 23508f62cfebf194cb55d086370651e8, type: 2}
+  - minQuantity: 3
+    maxQuantity: 5
+    itemData: {fileID: 11400000, guid: 6b609627341adec46b359b93b94924ff, type: 2}
+  - minQuantity: 2
+    maxQuantity: 4
+    itemData: {fileID: 11400000, guid: 477d2a9ee879d1d48b515b7696416aea, type: 2}
+  - minQuantity: 0
+    maxQuantity: 2
+    itemData: {fileID: 11400000, guid: 8a6c05281a89eec42b538f648938b5bc, type: 2}
+  - minQuantity: 0
+    maxQuantity: 2
+    itemData: {fileID: 11400000, guid: 42c9905d186161748a6d7875c96d3e28, type: 2}
+  - minQuantity: 0
+    maxQuantity: 2
+    itemData: {fileID: 11400000, guid: 8dc2c2cf03b8d6745be1fb6ef75e17d1, type: 2}
+  - minQuantity: 0
+    maxQuantity: 2
+    itemData: {fileID: 11400000, guid: dca3ef0b252c76a49b6ad1facf4b0bc2, type: 2}

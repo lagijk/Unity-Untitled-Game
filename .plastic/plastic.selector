@@ -1,0 +1,4 @@
+repository "Untitled Game@lagijk@cloud"
+  path "/"
+    br "/main"
+    co "/main"
