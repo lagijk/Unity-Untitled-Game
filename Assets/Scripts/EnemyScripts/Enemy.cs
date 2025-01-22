@@ -6,6 +6,7 @@ using Pathfinding;
 public class Enemy : MonoBehaviour
 {
     public Animator anim;
+    private Transform player;
 
     [Header ("Damages")] // Damage variable
     [SerializeField] private float attackDamage = 20f;
@@ -14,28 +15,46 @@ public class Enemy : MonoBehaviour
 
     // Pathing variable
     public AIPath aiPath;
+    [Header ("Movement")]
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float lineOfSite = 5f;
 
     // Knockback variable
     public float knockBackForce;
 
     void Start() {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>(); 
     }
 
     void Update() {
+        MoveTowardPlayer();
         Facing();
         
     }
 
+    // Move toward player if player is within range
+    void MoveTowardPlayer() {
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+        if (distanceFromPlayer <= lineOfSite) {
+            anim.SetBool("isMoving", true);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        } else {
+            anim.SetBool("isMoving", false);
+        }
+    }
+
     // Change enemy direction to face toward player (pathfinding)
     void Facing() {
-        anim.SetBool("isMoving", true);
-        if (aiPath.desiredVelocity.x >= 0.01f) {
+        if (player != null) {
+            if (aiPath.desiredVelocity.x >= 0.01f) {
             transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else if (aiPath.desiredVelocity.x <= -0.01f) {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
         }
-        else if (aiPath.desiredVelocity.x <= -0.01f) {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
+        
     }
 
     // Damages player when colliding (Attack method for enemy)
